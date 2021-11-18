@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      sizes="96x96"
+      href="./images/favicon.jpg"
+    />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <noscript><link rel="stylesheet" href="./css/noscript.css" /></noscript>
+
+    <title>SUIVIS DES CONTRAT</title>
+  </head>
+
+  <body class="is-preload">
+<!-- Wrapper -->
+<div id="wrapper">
+  <!-- Header -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <header id="header">
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.js"
+      integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+      crossorigin="anonymous"
+    ></script>
+
+    <a class="logo">Hello USER</a>
+    <br /><br />
+    <!-- Alerts -->
+  </header>
+  <nav id="nav">
+    <ul class="links">
+      <li class="">
+        <a class="test" href="./listCommandes.html" 
+          >LISTE DES COMMANDES</a
+        >
+      </li>
+      <li class="">
+        <a class="test" href="./renouveler_contrat.html"
+          >Renouveler Contrat</a
+        >
+      </li>
+      <li class="">
+        <a class="test"
+        href="./ajouter_dis.html"
+          >Ajouter Distributeur</a
+        >
+      </li>
+      <li class="active">
+        <a class="test" 
+          >Suivis des Contrats</a
+        >
+      </li>
+      <li class="">
+        <a class="test" href="./uploadProduct.html">Upload Product</a>
+      </li>
+      <li class="">
+        <a class="test" href="./donner_permission.html"
+          >Donner Permission</a
+        >
+      </li>
+    </ul>
+    <ul class="icons">
+      <li>
+        <span class="label"
+          ><a href="#" class="icon brands fa-sign-out" aria-hidden="true"
+            >Logout</a
+          >
+        </span>
+      </li>
+    </ul>
+  </nav>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+  <div id="main">
+    <!-- Table -->
+    <h2>Suivis des contrats</h2>
+    <div id="filtreur">
+        <div class="div-flex">
+            <span id="span-distri">Distributeur</span>
+            <select name="distributeur" class="form-control" id="selectDistri">
+            <option value=""></option>
+            </select>
+        </div>
+        <div class="div-flex">
+            <span id="span-date-FC">Date fin de contrat</span>
+            <input type="date" id="dateE">
+        </div>
+    </div>
+
+    <div id="table-div" class="table-wrapper">
+      <table class="alt">
+          <thead>
+              <tr>
+                  <th>Client</th>
+                  <th>Date Effet</th>
+                  <th>Date Fin de Contrat</th>
+              </tr>
+          </thead>
+          <tbody>
+              
+              <tr>
+                
+                  <td>ADVISOR COR</td>
+                  <td>2020-06-08</td>
+                  <td>2021-06-08</td>
+                  <td><button id="9" onclick="showDetail(this.id)" type="button" class="btn " data-toggle="modal" data-target="#exampleModal">Detail</button></td>               
+              </tr>
+              
+              <tr>
+                
+                  <td>CHERCHAR BOUMEDIENE</td>
+                  <td>2019-09-17</td>
+                  <td>2021-09-18</td>
+                  <td><button id="8" onclick="showDetail(this.id)" type="button" class="btn " data-toggle="modal" data-target="#exampleModal">Detail</button></td>               
+              </tr>
+              
+              <tr>
+                
+                  <td>BENALLAL NADIR</td>
+                  <td>2020-02-08</td>
+                  <td>2022-02-08</td>
+                  <td><button id="1" onclick="showDetail(this.id)" type="button" class="btn " data-toggle="modal" data-target="#exampleModal">Detail</button></td>               
+              </tr>
+              
+              <tr>
+                
+                  <td>KOHILI MOHAMED</td>
+                  <td>2019-10-08</td>
+                  <td>2022-10-19</td>
+                  <td><button id="13" onclick="showDetail(this.id)" type="button" class="btn " data-toggle="modal" data-target="#exampleModal">Detail</button></td>               
+              </tr>
+              
+              <tr>
+                
+                  <td>SIPAD ALGERIE</td>
+                  <td>2020-02-19</td>
+                  <td>2022-02-18</td>
+                  <td><button id="5" onclick="showDetail(this.id)" type="button" class="btn " data-toggle="modal" data-target="#exampleModal">Detail</button></td>               
+              </tr>
+              
+          </tbody>
+      </table>
+    </div>
+    <hr />
+  </div>
+</div>
+<div class="modal fade" id="exampleModal" >
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><h3>Detail Distributeur</h3></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="exemple"><div style="display: flex; justify-content: space-around; margin-bottom: 5%">
+        <div class="table-wrapper">
+          <table class="alt">
+            <thead>
+              <tr>
+                <td>Nom</td>
+                <td>Adresse</td>
+                <td>Tel Portable</td>
+                <td>Couriel</td>
+                <td>Date Effet</td>
+                <td>Date Echeance</td>
+                <td>Nbre commande</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ADVISOR COR</td>
+                <td>ALI MENDJLLI UV5 GROUP 7 N°4 ELKHROUB CONSTANTINE-ALGERIE</td>
+                <td>+(213)-780-75-95-76</td>
+                <td>advisor.cor.constantine@gmail.com</td>
+                <td>2020-06-08</td>
+                <td>2021-06-08</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $exemple = $('#exemple');
+  function showDetail(id){
+
+    $exemple.load('detailDisti/'+id)    
+
+
+  }
+</script>
+
+</div>
+<footer>
+  <div id="copyright">
+      <ul><li> Copyright &copy; GSH-CBI 2021</li></ul>
+  </div>
+</footer>
+
+    <script src="./js/jquery.scrollex.min.js"></script>
+    <script src="./js/jquery.scrolly.min.js"></script>
+    <script src="./js/browser.min.js"></script>
+    <script src="./js/breakpoints.min.js"></script>
+    <script src="./js/util.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/buttonsRelated.js"></script>
+  </body>
+</html>
+

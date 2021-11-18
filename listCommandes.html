@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      sizes="96x96"
+      href="./images/favicon.jpg"
+    />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <noscript><link rel="stylesheet" href="./css/noscript.css" /></noscript>
+
+    <title>LISTE DES COMMANDE</title>
+  </head>
+
+  <body class="is-preload">
+<!-- Wrapper -->
+<div id="wrapper">
+  <!-- Header -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.css">
+   <link rel="stylesheet" href="./css/main.css" />
+   <header id="header">
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.js"
+      integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+      crossorigin="anonymous"
+    ></script>
+
+    <a class="logo">Hello USER</a>
+    <br /><br />
+    <!-- Alerts -->
+  </header>
+  <nav id="nav">
+    <ul class="links">
+      <li class="active">
+        <a class="test" 
+          >LISTE DES COMMANDES</a
+        >
+      </li>
+      <li class="">
+        <a class="test" href="./renouveler_contrat.html"
+          >Renouveler Contrat</a
+        >
+      </li>
+      <li class="">
+        <a class="test"
+        href="./ajouter_dis.html"
+          >Ajouter Distributeur</a
+        >
+      </li>
+      <li class="">
+        <a class="test" href="./suivi_contrat.html"
+          >Suivis des Contrats</a
+        >
+      </li>
+      <li class="">
+        <a class="test" href=./uploadProduct.html">Upload Product</a>
+      </li>
+      <li class="">
+        <a class="test" href="./donner_permission.html"
+          >Donner Permission</a
+        >
+      </li>
+    </ul>
+    <ul class="icons">
+      <li>
+        <span class="label"
+          ><a href="#" class="icon brands fa-sign-out" aria-hidden="true"
+            >Logout</a
+          >
+        </span>
+      </li>
+    </ul>
+  </nav>
+  
+  <div id="main">
+   
+    <!-- Table -->
+    <h2>Listes de toutes les commandes</h2>
+    <div  id="filtreur">
+      <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+      <input type="date" id="dateE" class="margening">
+    </div>
+    <div class="col col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+      <select name="refdes" class="form-control select2" id="refdes">
+        <option value=""></option>
+      </select>
+    </div>
+    <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+      <select name="etat" id="etat" class="margening">
+        <option value="">- Etat -</option>
+        <option value="Brouillon">Brouillon</option>
+        <option value="En cours">En cours</option>
+        <option value="Terminé">Terminé</option>
+        <option value="Annulé">Annulé</option>
+      </select></div>
+      <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+      <select name="distributeur" class="form-control" class="margening" id="selectDistri" >
+        <option value=""></option>
+      </select></div>
+      <div class="col col-12 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+        <button onClick="window.location.reload();">Reset</button>
+      </div>
+      <br>
+    </div>
+    <div id="table-div-commande" class="table-wrapper">
+      <div class="bootstrap-table" id="abId0.8682577532456235"><div class="fixed-table-toolbar" id="abId0.6221615452341638"><div class="bars pull-left"></div><div class="pull-left search" id="abId0.681089215080861" abineguid="20B2D2001883472B8455C823E415749E"><input class="form-control" type="text" placeholder="Search"></div></div><div class="fixed-table-container" style="padding-bottom: 0px;"><div class="fixed-table-header" style="display: none;"><table></table></div><div class="fixed-table-body"><div class="fixed-table-loading" style="top: 60.0938px;">Loading, please wait...</div><table id="bootstrap-table" class="table table-hover">
+          <thead><tr><th  data-field="Commande"><div class="th-inner sortable both">N° Commande</div><div class="fht-cell"></div></th><th  data-field="Date"><div class="th-inner sortable both">Date</div><div class="fht-cell"></div></th><th  data-field="Client"><div class="th-inner sortable both">Client</div><div class="fht-cell"></div></th><th  data-field="Ref"><div class="th-inner sortable both">Ref Description</div><div class="fht-cell"></div></th><th  data-field="THT"><div class="th-inner sortable both">THT</div><div class="fht-cell"></div></th><th  data-field="Etat"><div class="th-inner sortable both">Etat</div><div class="fht-cell"></div></th><th  data-field="6"><div class="th-inner "></div><div class="fht-cell"></div></th><th  data-field="7"><div class="th-inner "></div><div class="fht-cell"></div></th><th  data-field="8"><div class="th-inner "></div><div class="fht-cell"></div></th><th  data-field="9"><div class="th-inner "></div><div class="fht-cell"></div></th></tr></thead>
+          <tbody><tr data-index="0"><td >None</td><td >2021-11-17</td><td >BENALLAL NADIR</td><td >DC030124/21</td><td >11 424.0</td><td >Brouillon</td><td  data-visible="false"><button id="262" onclick="showDetail(this.id)" type="button" class="btn " data-toggle="modal" data-target="#exampleModal">Detail</button></td><td >
+                    <a id="262" type="button" class="btn " href="/distributeur/pdf_view/262" target="_blank">Imprimer</a>
+                  </td><td ><a id="262" class="btn" type="button" href="/commerciale/modifier/262">Modifier</a></td><td >
+                    <div class="dropdown">
+                      <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                        ...
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" disabled="">
+                        <a class="text-danger dropdown-item" href="/commerciale/annulerCommande/262" style="cursor: default;">Annuler</a>
+                      </div>
+                    </div>
+                  </td></tr><tr data-index="1"><td >None</td><td >2021-11-17</td><td >BENALLAL NADIR</td><td >DC030123/21</td><td >168 126.3</td><td >Brouillon</td><td  data-visible="false"><button id="261" onclick="showDetail(this.id)" type="button" class="btn " data-toggle="modal" data-target="#exampleModal">Detail</button></td><td >
+                    <a id="261" type="button" class="btn " href="/distributeur/pdf_view/261" target="_blank">Imprimer</a>
+                  </td><td ><a id="261" class="btn" type="button" href="/commerciale/modifier/261">Modifier</a></td><td >
+                    <div class="dropdown">
+                      <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                        ...
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" disabled="">
+                        <a class="text-danger dropdown-item" href="/commerciale/annulerCommande/261" style="cursor: default;">Annuler</a>
+                      </div>
+                    </div>
+                  </td></tr><tr data-index="2"><td >None</td><td >2021-11-17</td><td >BENALLAL NADIR</td><td >DC030122/21</td><td >9 930 152.84</td><td >Brouillon</td><td  data-visible="false"><button id="260" onclick="showDetail(this.id)" type="button" class="btn " data-toggle="modal" data-target="#exampleModal">Detail</button></td><td >
+                    <a id="260" type="button" class="btn " href="/distributeur/pdf_view/260" target="_blank">Imprimer</a>
+                  </td><td ><a id="260" class="btn" type="button" href="/commerciale/modifier/260">Modifier</a></td><td >
+                    <div class="dropdown">
+                      <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                        ...
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" disabled="">
+                        <a class="text-danger dropdown-item" href="/commerciale/annulerCommande/260" style="cursor: default;">Annuler</a>
+                      </div>
+                    </div>
+                  </td></tr><tr data-index="3"><td >None</td><td >2021-11-16</td><td >TOMA GLASS</td><td >DC130014/21</td><td >2 952 626.0</td><td >Brouillon</td><td  data-visible="false"><button id="259" onclick="showDetail(this.id)" type="button" class="btn " data-toggle="modal" data-target="#exampleModal">Detail</button></td><td >
+                    <a id="259" type="button" class="btn " href="/distributeur/pdf_view/259" target="_blank">Imprimer</a>
+                  </td><td ><a id="259" class="btn" type="button" href="/commerciale/modifier/259">Modifier</a></td><td >
+                    <div class="dropdown">
+                      <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                        ...
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" disabled="">
+                        <a class="text-danger dropdown-item" href="/commerciale/annulerCommande/259" style="cursor: default;">Annuler</a>
+                      </div>
+                    </div>
+                  </td></tr><tr data-index="4"><td >None</td><td >2021-11-16</td><td >BENALLAL NADIR</td><td >DC030121/21</td><td >176 857.83</td><td >Brouillon</td><td  data-visible="false"><button id="258" onclick="showDetail(this.id)" type="button" class="btn " data-toggle="modal" data-target="#exampleModal">Detail</button></td><td >
+                    <a id="258" type="button" class="btn " href="/distributeur/pdf_view/258" target="_blank">Imprimer</a>
+                  </td><td ><a id="258" class="btn" type="button" href="/commerciale/modifier/258">Modifier</a></td><td >
+                    <div class="dropdown">
+                      <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                        ...
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" disabled="">
+                        <a class="text-danger dropdown-item" href="/commerciale/annulerCommande/258" style="cursor: default;">Annuler</a>
+                      </div>
+                    </div>
+                  </td></tr></tbody>
+      </table></div><div class="fixed-table-footer" style="display: none;"><table><tbody><tr></tr></tbody></table></div><div class="fixed-table-pagination"><div class="pull-left pagination-detail"><span class="pagination-info"></span><span class="page-list" style="display: none;"><span class="btn-group dropup"><button type="button" class="btn btn-default  dropdown-toggle" data-toggle="dropdown"><span class="page-size">8</span> <span class="caret"></span></button><ul class="dropdown-menu" role="menu"><li class="active"><a href="javascript:void(0)">8</a></li></ul></span> rows visible</span></div><div class="pull-right pagination" style="display: none;"><ul class="pagination"><li class="page-first disabled"><a href="javascript:void(0)"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li><li class="page-pre disabled"><a href="javascript:void(0)">‹</a></li><li class="page-number active"><a href="javascript:void(0)">1</a></li><li class="page-next disabled"><a href="javascript:void(0)">›</a></li><li class="page-last disabled"><a href="javascript:void(0)"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li></ul></div></div></div></div><div class="clearfix"></div>
+     
+    <!--pagination test-->
+    <div class="row text-center" id="paginator" style="justify-content: center;">
+      <nav aria-label="Page navigation example">
+        
+        <ul class="pagination justify-content-center">
+        
+            <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+        
+
+        
+
+        
+            
+                <li class="page-item active" aria-current="page">
+              <span class="page-link">
+                1
+              </span>
+            </li>
+            
+        
+            
+                <li class="page-item"><a class="page-link" href="?page=2">2</a></li>
+            
+        
+            
+                <li class="page-item"><a class="page-link" href="?page=3">3</a></li>
+            
+        
+            
+                <li class="page-item"><a class="page-link" href="?page=4">4</a></li>
+            
+        
+            
+                <li class="page-item"><a class="page-link" href="?page=5">5</a></li>
+            
+        
+
+        
+
+        
+            <li class="page-item">
+            <a class="page-link" href="?page=2">Next</a>
+          </li>
+        
+        </ul>
+        
+      </nav>
+    </div>
+  <!--end of Pagination-->
+
+  
+  <div class="container">
+        <div id="pagination-wrapper"></div>
+      </div>
+    </div>
+    <hr />
+  </div>
+</div>
+<div class="modal fade" id="exampleModal" >
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><h3>Bon de commande</h3></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="exemple">
+
+        <div style="display: flex; justify-content: space-around; margin-bottom: 5%">
+          <div style="display: flex; justify-content: space-around; flex-direction: column">
+            <h6>N°</h6>
+            <h6>Societe</h6>
+            <h6>Client</h6>
+            <h6>Date</h6>
+            <h6>Réference Description</h6>
+          </div>
+          <div style="display: flex; justify-content: space-around; flex-direction: column">
+            <h6>None</h6>
+            <h6>strugal</h6>
+            <h6>KOHILI MOHAMED</h6>
+            <h6>2021-11-18</h6>
+            <h6>DC500027/21</h6>
+          </div>
+        </div>
+        <div class="table-wrapper">
+          <table class="alt">
+            <thead>
+              <tr>
+                <th>Code Article</th>
+                <th>Nom Article</th>
+                <th>Quantité</th>
+                <th>Unité de mesure</th>
+                <th>Prix Unitaire</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              
+              <tr>
+                <td>STR000646400</td>
+                <td>PRE-CADRE 50 MM </td>
+                <td>1200</td>
+                <td>Unité</td>
+                <td>1 596.51</td>
+                
+              </tr>
+              
+            </tbody>
+            <tfoot>
+              <tr>
+                
+                <td colspan="3"></td>
+                
+                <td>MTTC</td>
+                <td>1 915 812.0</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $exemple = $('#exemple');
+  function showDetail(id,typeA){
+    console.log(typeA)
+    $exemple.load('detailCommande/'+id)    
+
+
+  }
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="./js/bootstrap-table.js"></script>
+  <script type="text/javascript">
+
+		var $table = $('#bootstrap-table');
+
+	       
+
+	        $().ready(function(){
+	       
+
+	            $table.bootstrapTable({
+	                toolbar: ".toolbar",
+	                clickToSelect: true,
+	                showRefresh: false,
+	                search: true,
+	                showToggle: false,
+	                showColumns: false,
+	                pagination: true,
+	                searchAlign: 'left',
+	                pageSize: 8,
+	                clickToSelect: false,
+	                pageList: [8,10,25,50,100],
+
+	                formatShowingRows: function(pageFrom, pageTo, totalRows){
+	                    //do nothing here, we don't want to show the text "showing x of y from..."
+	                },
+	                formatRecordsPerPage: function(pageNumber){
+	                    return pageNumber + " rows visible";
+	                },
+	                icons: {
+	                    refresh: 'fa fa-refresh',
+	                    toggle: 'fa fa-th-list',
+	                    columns: 'fa fa-columns',
+	                    detailOpen: 'fa fa-plus-circle',
+	                    detailClose: 'ti-close'
+	                }
+	            });
+
+	            //activate the tooltips after the data table is initialized
+	            $('[rel="tooltip"]').tooltip();
+
+	            $(window).resize(function () {
+	                $table.bootstrapTable('resetView');
+	            });
+			});
+
+	</script>
+  
+</div>
+<footer>
+  <div id="copyright">
+      <ul><li> Copyright &copy; GSH-CBI 2021</li></ul>
+  </div>
+</footer>
+
+    <script src="./js/jquery.scrollex.min.js"></script>
+    <script src="./js/jquery.scrolly.min.js"></script>
+    <script src="./js/browser.min.js"></script>
+    <script src="./js/breakpoints.min.js"></script>
+    <script src="./js/util.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/buttonsRelated.js"></script>
+  </body>
+</html>

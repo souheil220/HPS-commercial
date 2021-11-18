@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      sizes="96x96"
+      href="./images/favicon.jpg"
+    />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <noscript><link rel="stylesheet" href="./css/noscript.css" /></noscript>
+
+    <title>AJOUTER DISTRIBUTEUR</title>
+  </head>
+
+  <body class="is-preload">
+    <div id="wrapper">
+      <header id="header">
+        <script
+          src="https://code.jquery.com/jquery-2.2.4.js"
+          integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+          crossorigin="anonymous"
+        ></script>
+
+        <a class="logo">Hello USER</a>
+        <br /><br />
+        <!-- Alerts -->
+      </header>
+
+      <nav id="nav">
+        <ul class="links">
+          <li class="">
+            <a class="test" href="./listCommandes.html" 
+              >LISTE DES COMMANDES</a
+            >
+          </li>
+          <li class="">
+            <a class="test" href="./renouveler_contrat.html"
+              >Renouveler Contrat</a
+            >
+          </li>
+          <li class="active">
+            <a class="test"
+              >Ajouter Distributeur</a
+            >
+          </li>
+          <li class="">
+            <a class="test" href="./suivi_contrat.html"
+              >Suivis des Contrats</a
+            >
+          </li>
+          <li class="">
+            <a class="test" href=./uploadProduct.html">Upload Product</a>
+          </li>
+          <li class="">
+            <a class="test" href="./donner_permission.html"
+              >Donner Permission</a
+            >
+          </li>
+        </ul>
+        <ul class="icons">
+          <li>
+            <span class="label"
+              ><a href="#" class="icon brands fa-sign-out" aria-hidden="true"
+                >Logout</a
+              >
+            </span>
+          </li>
+        </ul>
+      </nav>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+      <div id="main">
+        <h2>Ajouter un nouveau distributeur</h2>
+        <form id="form1" method="post" action="">
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: space-between;
+            "
+          >
+            <div class="text-center col col-12 col-lg-6 col-xl-6">
+              <label>Nom Utilisateur</label>
+              <input name="nom_utilisateur" type="text" required />
+            </div>
+            <div class="text-center col col-12 col-lg-6 col-xl-6">
+              <label>nom</label>
+              <input name="nom" type="text" required />
+            </div>
+            <div class="text-center col col-12 col-lg-6 col-xl-6">
+              <label>adress</label>
+              <input name="adress" type="text" required />
+            </div>
+            <div class="text-center col col-12 col-lg-6 col-xl-6">
+              <label>tel_fix</label>
+              <input name="tel_fix" type="text" />
+            </div>
+            <div class="text-center col col-12 col-lg-6 col-xl-6">
+              <label>tel_portable</label>
+              <input name="tel_portable" type="text" />
+            </div>
+            <div class="text-center col col-12 col-lg-6 col-xl-6">
+              <label>couriel</label>
+              <input name="couriel" type="text" />
+            </div>
+            <div class="text-center col col-12 col-lg-6 col-xl-6">
+              <label>civilite</label>
+              <input name="civilite" type="number" />
+            </div>
+            <div class="text-center col col-12 col-lg-6 col-xl-6">
+              <label>site_web</label>
+              <input name="site_web" type="text" />
+            </div>
+            <div class="text-center col col-12 col-lg-6 col-xl-6">
+              <label>rcn</label>
+              <input name="rcn" type="text" required />
+            </div>
+            <div
+              class="text-center col col-12 col-lg-6 col-xl-6 testing"
+              required
+            >
+              <label>date_enregistrement_rc</label>
+              <input
+                pattern="^(19|20)\d\d([- /.])(0[1-9]|1[012])\2(0[1-9]|[12][0-9]|3[01])$"
+                type="text"
+                name="date_enregistrement_rc"
+                required
+                placeholder="Entrer la date sous form AAAA-MM-JJ"
+              />
+            </div>
+            <div class="text-center col col-12 col-lg-6 col-xl-6">
+              <label>nis</label>
+              <input name="nis" type="text" />
+            </div>
+            <div class="text-center col col-12 col-lg-6 col-xl-6">
+              <label>ifn</label>
+              <input name="ifn" type="text" required />
+            </div>
+            <div class="text-center col col-12 col-lg-6 col-xl-6">
+              <label>art</label>
+              <input name="art" type="text" required />
+            </div>
+            <div class="text-center col col-12 col-lg-6 col-xl-6">
+              <label>date_debut_activité</label>
+              <input
+                pattern="^(19|20)\d\d([- /.])(0[1-9]|1[012])\2(0[1-9]|[12][0-9]|3[01])$"
+                type="text"
+                name="date_debut_activité"
+                required
+                placeholder="Entrer la date sous form AAAA-MM-JJ"
+                title="AAAA-MM-JJ"
+              />
+            </div>
+            <div class="text-center col col-12 col-lg-6 col-xl-6">
+              <label>date_effet</label>
+              <input
+                pattern="^(19|20)\d\d([- /.])(0[1-9]|1[012])\2(0[1-9]|[12][0-9]|3[01])$"
+                name="date_effet"
+                type="text"
+                required
+                placeholder="Entrer la date sous form AAAA-MM-JJ"
+                title="AAAA-MM-JJ"
+              />
+            </div>
+            <div class="text-center col col-12 col-lg-6 col-xl-6">
+              <label>date_echeance</label>
+              <input
+                pattern="^(19|20)\d\d([- /.])(0[1-9]|1[012])\2(0[1-9]|[12][0-9]|3[01])$"
+                name="date_echeance"
+                type="text"
+                required
+                placeholder="Entrer la date sous form AAAA-MM-JJ"
+                title="AAAA-MM-JJ"
+              />
+            </div>
+            <div class="text-center col col-12 col-lg-6 col-xl-6">
+              <label>status</label>
+              <input name="status" type="text" value="validate" required />
+            </div>
+            <button id="btnSubmit" class="btn" style="margin-top: 1%">
+              Enregistrer
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- <script type="text/javascript">
+  $(document).ready(function () {
+    $("#btnSubmit").on("click", function () {
+      var myForm = $("form#form1");
+      if (myForm) {
+        $(this).prop("disabled", true);
+        // $(myForm).submit();
+      }
+    });
+  });
+</script> -->
+<footer>
+  <div id="copyright">
+      <ul><li> Copyright &copy; GSH-CBI 2021</li></ul>
+  </div>
+</footer>
+
+    <script src="./js/jquery.scrollex.min.js"></script>
+    <script src="./js/jquery.scrolly.min.js"></script>
+    <script src="./js/browser.min.js"></script>
+    <script src="./js/breakpoints.min.js"></script>
+    <script src="./js/util.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/buttonsRelated.js"></script>
+  </body>
+</html>
